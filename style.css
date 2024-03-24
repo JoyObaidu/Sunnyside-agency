@@ -1,0 +1,224 @@
+:root{
+    --Dark-blue-photography-text: hsl(198, 62%, 26%);
+    --Dark-moderate-cyan-footer: hsl(168, 34%, 41%);
+    --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --Dark-grayish-blue: hsl(232, 10%, 55%);
+    --Grayish-blue:  hsl(206, 94%, 68%);
+    --White: hsl(0, 0%, 100%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+img{
+    width: 100%;
+}
+header{
+    padding: 1rem;
+    background-image: url("./images/mobile/image-header.jpg");
+    background-position: 100% 100%;
+    background-size: cover;
+    color: var(--White);
+    text-align: center;
+    min-height: 30rem;
+}
+header .logo h1{
+    width: .5rem;
+}
+header > h1{
+    position: relative;
+    top: 8rem;
+}
+header nav ul li{
+    list-style-type: none;
+    margin-bottom: 1.5rem;
+}
+header nav{
+    background-color: var(--White);
+    position: absolute; 
+    width: 90%;
+    padding: 1.5rem;
+    top: 15%;
+}
+
+/* header nav::before{ 
+    content:'';
+    width: 30px;
+    background-color: var(--White);
+    height: 30px;
+    position: relative;
+    top: 50%;
+} */
+header nav li a{
+    text-decoration: none;
+    color: var(--Dark-grayish-blue);
+}
+/* header .arrow{
+    position: absolute;
+    width: 100%;
+} */
+
+/* article */
+article .content{
+    text-align: center;
+    margin: 2.5rem 2rem;
+    color: var(--Very-dark-grayish-blue);
+    font-weight: 900;
+}
+article .content a{
+    text-decoration: none;
+    border-bottom: 5px solid orange;
+}
+article .content h2{
+    font-size: 2rem;
+}
+article .graphic-design{
+    background-image: url("./images/mobile/image-graphic-design.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 500px;
+}
+article .graphic-design, 
+.photography .content{
+    padding-top: 18rem;
+}
+
+article .photography{
+    background-image: url("./images/mobile/image-photography.jpg");
+    background-position: center;
+    background-size: cover;
+    min-height: 550px;
+}
+
+/* client testimonials section */
+.client-testimonials{
+    padding: 2rem;
+}
+.client-testimonials h1{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--Dark-grayish-blue);
+}
+.client-testimonials .content div img {
+    width: 100px;
+    border-radius: 100%;
+} 
+.client-testimonials .content div{
+   margin-bottom: 50px;
+}
+.client-testimonials .content div *{
+    padding: 20px 0;
+}
+
+.gallery{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.gallery .image{
+    width: 100%;
+    margin-bottom: -5px;
+}
+
+footer{
+    background-color: hsl(168, 46%, 65%);
+    padding: 50px;
+    color: hsl(167, 94%, 7%);
+}
+footer h1{
+    font-weight: bolder;
+}
+footer *{
+    margin-bottom: 40px;
+}
+footer .navigate span{
+   margin-left: 30px;
+   font-weight: 900;
+}
+
+
+@media screen and (min-width: 600px){
+    header{
+        min-height: 30rem;
+    }
+    header nav ul li{
+        margin-bottom: 0;
+    }
+    header nav{
+        background: none;
+        position: absolute; 
+        padding: 0;
+        top: 5%;
+        left: 30%;
+    }
+    header nav ul{
+        display: inline-flex;
+        width: 40%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    header nav li a{
+        color: var(--White);
+    }
+    header nav li a:hover{
+        background-color: var(--White);
+        color: black;
+        padding: 10px;
+        border-radius: 10px;
+        margin-right: 1rem;
+    }
+    .gallery{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+    }
+    .client-testimonials .content{
+        display: flex;
+        font-size: 1rem;
+    } 
+    .client-testimonials .content div{
+        margin: 0 10px;
+    }
+
+    article section{
+        width: 100%;
+       display: flex;
+       flex-direction: row;
+    }
+    article .transform{
+        flex-direction: row-reverse;
+    }
+    article section img{
+        width: 50%;
+        flex: 50%;
+    }
+    article .content{
+        flex: 50%;
+    }
+}
+
+
+@media screen and (min-width: 1080px){
+    header{
+        min-height: 60rem;
+    }
+    article .graphic-design *, 
+.photography .content *{
+     margin-bottom: 1rem;
+}
+}
